@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SENSE 自动利润对比表 V4 — 粉色 PDF 导出版</title>
+<style>
+:root{color-scheme:dark;--bg:#000;--border:#292929;--muted:#a5a5a5;--text:#eee;--green:#12d887}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;font-size:13px;line-height:1.5}main{width:min(100% - 28px,850px);margin:12px auto 32px;padding:16px 14px 12px;border:1px solid #3a3a3a;border-radius:16px;background:#000}h1{font-size:19px;font-weight:600;letter-spacing:.1px;margin:0}h2{font-size:15px;margin:0 0 12px;font-weight:700}h3{font-size:13px;margin:13px 0 9px;font-weight:650}.subtitle{color:#9c9c9c;font-size:11px;margin:0 0 18px}.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.group-title{font-size:13px;margin:0 0 10px;font-weight:650}.field{display:block;margin-bottom:10px;font-size:11px;color:#d7d7d7}.field>span{display:block;margin:0 0 4px}.input{width:100%;height:34px;border:1px solid #303030;border-radius:20px;background:#000;color:#f5f5f5;padding:0 12px;font-size:13px;outline:none;transition:border-color .15s}.input:focus{border-color:#9a9a9a}.input::placeholder{color:#747474}.section{border-top:1px solid #292929;margin-top:20px;padding-top:17px}.rate-hint{font-size:11px;color:#aaa;margin:4px 0 10px}.rate-preview{display:flex;justify-content:space-between;gap:12px;margin:7px 0 7px;font-size:12px}.rate-preview strong{font-size:15px;font-weight:650}.table-wrap{width:100%;overflow-x:auto}.profit-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:11px}.profit-table th{border-bottom:1px solid #292929;color:#bcbcbc;font-weight:500;text-align:left;padding:8px 4px}.profit-table td{border-bottom:1px solid #202020;padding:9px 4px;vertical-align:middle}.profit-table th:nth-child(1),.profit-table td:nth-child(1){width:47%}.profit-table th:nth-child(n+2),.profit-table td:nth-child(n+2){width:26.5%;text-align:right}.profit-table tr:last-child td{border-bottom:0}.money{font-variant-numeric:tabular-nums;font-size:11px;white-space:nowrap}.pct{display:block;font-size:10px;color:#959595;line-height:1.15}.highlight-row td{font-weight:650}.expense-row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:10px 0;font-size:12px}.expense-row .input{width:150px}.total-expenses{margin:22px 7px 19px;font-size:13px;font-weight:650}.total-expenses b{display:block;font-size:18px;margin-top:2px}.net{padding:24px 8px 10px}.net .caption{font-size:12px}.net .net-money{font-size:29px;font-weight:700;color:var(--green);letter-spacing:-.5px;margin-top:5px}.net .net-percent{font-size:18px;color:var(--green);font-weight:700;margin-top:4px}.summary{border-top:1px solid #282828;margin:18px 8px 0;padding-top:18px;font-size:12px}.summary p{margin:0 0 10px}.kpi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:12px 8px 4px}.kpi-card{border:1px solid #2c2c2c;border-radius:16px;background:linear-gradient(180deg,#0a0a0a 0%,#050505 100%);padding:16px 16px 18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}.kpi-label{font-size:12px;color:#b8b8b8;margin-bottom:8px;letter-spacing:.2px}.kpi-value{font-size:32px;font-weight:800;line-height:1.08;letter-spacing:-.6px;color:#fff;font-variant-numeric:tabular-nums}.kpi-value.revenue{color:var(--green)}.kpi-unit{font-size:18px;font-weight:700;margin-left:4px;color:#d8d8d8}.breakdown{line-height:1.8}.breakdown h3{margin:0 0 5px}.breakdown .spaced{margin-top:12px}.reset{display:block;width:100%;height:36px;margin-top:18px;border:1px solid #383838;background:#000;color:#d9d9d9;border-radius:20px;cursor:pointer;font-size:12px}.reset:hover{background:#141414}.footnote{color:#aaa;font-size:10px;margin:11px 0 0;line-height:1.65}.readonly-value{font-variant-numeric:tabular-nums}@media(min-width:720px){main{padding:22px 24px}.profit-table{font-size:12px}.money{font-size:12px}.kpi-value{font-size:38px}}@media(max-width:520px){.kpi-grid{grid-template-columns:1fr}.kpi-value{font-size:28px}.kpi-unit{font-size:16px}}@media(max-width:370px){main{width:calc(100% - 12px);padding:12px 9px}.two{gap:9px}.input{padding:0 9px}.profit-table{font-size:9px}.money{font-size:9px}.profit-table th:nth-child(1),.profit-table td:nth-child(1){width:42%}.profit-table th:nth-child(n+2),.profit-table td:nth-child(n+2){width:29%}.kpi-card{padding:14px 13px 16px}.kpi-value{font-size:24px}}
+/* SENSE V4 · Soft Pink Theme: #ffffff / #fef0f5 / #ffd7e3 */
+:root{color-scheme:light;--bg:#ffffff;--border:#edd8df;--muted:#765d69;--text:#30252c;--green:#b82767;--soft:#fef0f5;--pink:#ffd7e3;--deep:#952251}
+body{background:var(--bg);color:var(--text)}
+main{background:#ffffff;border:1px solid #f2dce4;box-shadow:0 12px 34px rgba(157,67,105,.065)}
+header{background:var(--soft);padding:17px 18px 12px;border-radius:13px;margin-bottom:18px}
+h1,h2,h3,.group-title{color:#392630}
+.subtitle{color:#866a78;margin-bottom:0}
+.field{color:#594450}
+.input{background:#fff;color:#362630;border-color:#e9cdd7}
+.input:focus{border-color:#cd6690;box-shadow:0 0 0 3px rgba(255,215,227,.65)}
+.input::placeholder{color:#9d8892}
+.section{border-top-color:#eedde3}
+.rate-hint{color:#826774}
+.rate-preview strong{color:#b82767}
+.profit-table th{background:var(--soft);color:#684654;border-bottom-color:#ead2dc}
+.profit-table th:first-child{border-radius:6px 0 0 6px}
+.profit-table th:last-child{border-radius:0 6px 6px 0}
+.profit-table td{border-bottom-color:#f1e4e9}
+.profit-table .highlight-row td{background:#fff6f9;color:#7e244c}
+.pct{color:#947e87}
+.total-expenses b{color:#992653}
+.net{background:var(--soft);border:1px solid var(--pink);border-radius:15px;padding:20px;margin-top:16px}
+.net .caption{color:#624450}
+.net .net-money,.net .net-percent{color:var(--deep)}
+.summary{border-top-color:#ecd7df}
+.kpi-card{border:1px solid #f5becf;background:linear-gradient(155deg,#fef0f5 0%,#ffd7e3 100%);box-shadow:none}
+.kpi-label{color:#784c60;font-weight:650}
+.kpi-value,.kpi-value.revenue{color:#92224f}
+.kpi-unit{color:#784c60}
+.reset{background:var(--soft);color:#8d2a55;border-color:#eab7ca;font-weight:650}
+.reset:hover{background:var(--pink)}
+.footnote{color:#866f79}
+@media(max-width:520px){header{padding:14px 12px 11px}}
+/* V4: enlarged report heading and functional PDF export */
+header h1{font-size:clamp(25px,4.5vw,34px);font-weight:800;line-height:1.24;letter-spacing:-.6px}
+header .subtitle{font-size:clamp(13px,2.2vw,16px);line-height:1.65;font-weight:550;margin-top:8px}
+header{padding:23px 22px 20px}
+.report-actions{display:flex;justify-content:flex-end;align-items:center;margin:0 0 16px;gap:10px}
+.pdf-download{border:1px solid #e7a8c1;border-radius:999px;background:#ffd7e3;color:#772542;padding:11px 19px;font-size:13px;font-weight:750;cursor:pointer;box-shadow:0 2px 8px rgba(150,40,80,.07)}
+.pdf-download:hover,.pdf-download:focus-visible{background:#f7bed1;outline:2px solid #cf7b9f;outline-offset:2px}
+.export-help{font-size:11px;color:#886c78}
+@media(max-width:520px){header{padding:19px 15px 17px}.report-actions{justify-content:stretch;align-items:stretch;flex-direction:column}.pdf-download{width:100%}.export-help{text-align:center}}
+@page{size:A4;margin:12mm 11mm}
+@media print{
+  :root{color-scheme:light!important}
+  html,body{background:#fff!important;color:#30252c!important;font-size:10px!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  main{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+  .report-actions,.reset{display:none!important}
+  header{margin:0 0 14px!important;padding:15px 17px!important;break-inside:avoid}
+  header h1{font-size:25px!important}header .subtitle{font-size:12px!important}
+  .two{gap:12px!important}.field{margin-bottom:6px!important}.input{height:27px!important;font-size:11px!important;background:#fff!important;color:#362630!important;border:1px solid #e9cdd7!important}
+  .section{margin-top:13px!important;padding-top:11px!important}
+  h2{font-size:13px!important;margin-bottom:7px!important}h3{margin-top:9px!important;margin-bottom:6px!important}
+  .profit-table{font-size:10px!important}.profit-table td{padding:5px 3px!important}.profit-table th{padding:6px 3px!important}
+  .money{font-size:10px!important}.pct{font-size:8px!important}
+  .expense-row{margin:5px 0!important}.total-expenses{margin:12px 6px!important}
+  .net{padding:12px!important;break-inside:avoid}.net .net-money{font-size:27px!important}
+  .kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.kpi-card{padding:12px!important;break-inside:avoid}.kpi-value{font-size:27px!important}
+  .summary{padding-top:12px!important;margin-top:12px!important}.summary p{margin-bottom:5px!important}
+  .section,.table-wrap,.profit-table tr,.summary,.breakdown,.group-title,.total-expenses{break-inside:avoid-page}
+  .footnote{font-size:9px!important}
+}
+</style>
+</head>
+<body><main>
+<header><h1>SENSE 自动利润对比表 V4</h1><p class="subtitle">三层利润计算 · 可调整佣金比例 · Referral Fees</p></header>
+<div class="report-actions"><span class="export-help">导出当前填写的数据与计算结果</span><button type="button" class="pdf-download" id="download-pdf">↓ Download File (PDF)</button></div>
+<div class="two" id="customer-inputs"></div>
+<section class="section"><h2>第一层 · Surgery Gross Profit（手术毛利）</h2><div class="table-wrap"><table class="profit-table"><thead><tr><th>项目</th><th>自营客源</th><th>Partner 客源</th></tr></thead><tbody id="gross-table"></tbody></table></div></section>
+<section class="section"><h2>第二层 · Contribution Profit（贡献利润）</h2><h3>Commission Rate Settings（调整佣金比例）</h3><div class="two"><label class="field"><span>In-House Sales (%)</span><input class="input" id="inhouseRate" type="number" step="any" value="10" inputmode="decimal"></label><label class="field"><span>Partner / KOL (%)</span><input class="input" id="partnerRate" type="number" step="any" value="10" inputmode="decimal"></label></div><div class="rate-hint">适用于两种客源　　　　　　　　　　　　仅 Partner 客源</div><div class="rate-preview"><span>自营客源总佣金比例</span><strong id="self-total-rate"></strong></div><div class="rate-preview"><span>Partner 客源总佣金比例</span><strong id="partner-total-rate"></strong></div><div class="two" style="margin-top:13px"><label class="field"><span>自营客源 Referral Fees（RM）</span><input class="input" id="selfReferral" type="number" min="0" step="any" placeholder="留空 = RM0" inputmode="decimal"></label><label class="field"><span>Partner 客源 Referral Fees（RM）</span><input class="input" id="partnerReferral" type="number" min="0" step="any" placeholder="留空 = RM0" inputmode="decimal"></label></div><div class="table-wrap"><table class="profit-table"><thead><tr><th>项目</th><th>自营客源</th><th>Partner 客源</th></tr></thead><tbody id="contribution-table"></tbody></table></div></section>
+<section class="section"><h2>第三层 · SENSE Net Operating Profit（净营业利润）</h2><h3>每月固定共享成本</h3><div class="expense-row"><label for="salary">Salary 员工底薪</label><input class="input" id="salary" type="number" min="0" step="any" value="3300" inputmode="decimal"></div><div class="expense-row"><label for="ads">Ads Fees 广告费</label><input class="input" id="ads" type="number" min="0" step="any" value="3500" inputmode="decimal"></div><div class="expense-row"><label for="operating">Operating Cost 营运费</label><input class="input" id="operating" type="number" min="0" step="any" value="1000" inputmode="decimal"></div><div class="total-expenses">每月共享费用总额 <b id="shared-total"></b></div><div class="table-wrap"><table class="profit-table"><thead><tr><th>项目</th><th>自营客源</th><th>Partner 客源</th></tr></thead><tbody id="net-table"></tbody></table></div><div class="net"><div class="caption">SENSE 公司整体净营业利润</div><div class="net-money" id="net-result"></div><div class="net-percent" id="net-margin"></div></div><div class="summary"><div class="kpi-grid"><div class="kpi-card"><div class="kpi-label">总成交顾客</div><div class="kpi-value"><span id="total-people"></span><span class="kpi-unit">人</span></div></div><div class="kpi-card"><div class="kpi-label">总手术收入</div><div class="kpi-value revenue" id="total-revenue"></div></div></div></div><div class="summary breakdown"><h3>Commission Breakdown（佣金明细）</h3><div id="commission-details"></div></div><div class="summary breakdown" id="final-expenses"></div></section>
+<button class="reset" type="button" id="reset">↻ 恢复默认数据</button>
+<p class="footnote">佣金按各客源手术总收入 × 对应佣金百分比计算，而不是按手术毛利计算。Referral Fees 留空按 RM0。内部陪台费用在第一层扣除；共享费用按顾客人数分摊。公司整体只扣一次。</p>
+</main>
+<script>
+'use strict';
+const customerConfig=[{id:'self',title:'SENSE 自营客源'},{id:'partner',title:'Partner / KOL 客源'}];
+const fields=[['count','顾客人数','5'],['revenue','每人手术金额 RM','20000'],['hospital','每人医院成本 RM','8000'],['misc','每人医院杂费 RM','500'],['escort','内部陪台费用 RM（总额）','0']];
+const defaults={};
+const inputWrapper=document.getElementById('customer-inputs');
+for(const group of customerConfig){const box=document.createElement('div');box.innerHTML=`<div class="group-title">${group.title}</div>`+fields.map(([key,label,val])=>{defaults[`${group.id}_${key}`]=val;return `<label class="field"><span>${label}</span><input class="input" id="${group.id}_${key}" type="number" min="0" step="${key==='count'?'1':'any'}" inputmode="decimal" value="${val}"></label>`}).join('');inputWrapper.append(box)}
+for(const [id,val] of Object.entries({inhouseRate:'10',partnerRate:'10',selfReferral:'',partnerReferral:'',salary:'3300',ads:'3500',operating:'1000'}))defaults[id]=val;
+const get=id=>{const n=Number(document.getElementById(id).value);return Number.isFinite(n)?Math.max(0,n):0};
+const rm=n=>'RM '+(Number.isFinite(n)?n:0).toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct=n=>(Number.isFinite(n)?n:0).toFixed(1)+'%';
+const rateText=n=>(Math.round(n*100)/100).toLocaleString('en-MY',{maximumFractionDigits:2})+'%';
+const amount=(number,total,negative=false)=>`<span class="money">${rm(number)}</span><span class="pct">${pct(total?number/total*100:0)}</span>`;
+function row(label,a,b,revA,revB,emphasis=false){return `<tr${emphasis?' class="highlight-row"':''}><td>${label}</td><td>${amount(a,revA)}</td><td>${amount(b,revB)}</td></tr>`}
+function update(){
+const s={},p={};for(const [obj,prefix] of [[s,'self'],[p,'partner']]){for(const [k] of fields)obj[k]=get(prefix+'_'+k);obj.rev=obj.count*obj.revenue;obj.hosp=obj.count*obj.hospital;obj.fee=obj.count*obj.misc;obj.gross=obj.rev-obj.hosp-obj.fee-obj.escort;}
+let r1=get('inhouseRate')/100,r2=get('partnerRate')/100;
+document.getElementById('self-total-rate').textContent=rateText(r1*100);document.getElementById('partner-total-rate').textContent=rateText((r1+r2)*100);
+for(const [obj,prefix] of [[s,'self'],[p,'partner']]){obj.inhouse=obj.rev*r1;obj.partner=prefix==='partner'?obj.rev*r2:0;obj.commission=obj.inhouse+obj.partner;obj.referral=get(prefix+'Referral');obj.contribution=obj.gross-obj.commission-obj.referral;}
+const grossRows=[['手术总收入',s.rev,p.rev],['医院手术成本',-s.hosp,-p.hosp],['医院杂费',-s.fee,-p.fee],['内部陪台费用',-s.escort,-p.escort],['手术毛利',s.gross,p.gross]];
+document.getElementById('gross-table').innerHTML=grossRows.map(([label,a,b],i)=>row(label,a,b,s.rev,p.rev,i===4)).join('');
+const contribRows=[['手术毛利',s.gross,p.gross],[`In-House Sales 佣金（${rateText(r1*100)}）`,-s.inhouse,-p.inhouse],[`Partner / KOL 佣金（${rateText(r2*100)}）`,-s.partner,-p.partner],['佣金支出合计',-s.commission,-p.commission],['Referral Fees（介绍费）',-s.referral,-p.referral],['贡献利润',s.contribution,p.contribution]];
+document.getElementById('contribution-table').innerHTML=contribRows.map(([label,a,b],i)=>row(label,a,b,s.rev,p.rev,i===5)).join('');
+const shared=get('salary')+get('ads')+get('operating'),totalCount=s.count+p.count;
+s.allocated=totalCount?shared*s.count/totalCount:0;p.allocated=totalCount?shared*p.count/totalCount:0;s.net=s.contribution-s.allocated;p.net=p.contribution-p.allocated;
+document.getElementById('shared-total').textContent=rm(shared);
+document.getElementById('net-table').innerHTML=[['贡献利润',s.contribution,p.contribution],['共享费用分摊',-s.allocated,-p.allocated],['净营业利润',s.net,p.net]].map(([label,a,b],i)=>row(label,a,b,s.rev,p.rev,i===2)).join('');
+const net=s.net+p.net,revenue=s.rev+p.rev;document.getElementById('net-result').textContent=rm(net);document.getElementById('net-margin').textContent=pct(revenue?net/revenue*100:0);document.getElementById('total-people').textContent=(s.count+p.count).toLocaleString('en-MY');document.getElementById('total-revenue').textContent=rm(revenue);
+document.getElementById('commission-details').innerHTML=`<p>In-House Sales（自营客源 ${rateText(r1*100)}） <strong>${rm(s.inhouse)}</strong></p><p>In-House Sales（Partner 客源 ${rateText(r1*100)}） <strong>${rm(p.inhouse)}</strong></p><p>In-House Sales 总佣金 <strong>${rm(s.inhouse+p.inhouse)}</strong></p><p class="spaced">Partner / KOL 总佣金（${rateText(r2*100)}） <strong>${rm(p.partner)}</strong></p>`;
+document.getElementById('final-expenses').innerHTML=`<p>SENSE 佣金总支出 <strong>${rm(s.commission+p.commission)}</strong></p><p>Referral Fees 总支出 <strong>${rm(s.referral+p.referral)}</strong></p><p>每月共享费用 <strong>${rm(shared)}</strong></p>`;
+}
+document.getElementById('download-pdf').addEventListener('click',()=>{update();window.print()});
+document.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',update));document.getElementById('reset').addEventListener('click',()=>{for(const [id,value] of Object.entries(defaults))document.getElementById(id).value=value;update()});update();
+</script>
+</body></html>
